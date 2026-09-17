@@ -1,0 +1,14 @@
+# Spark runtime checkpoints
+checkpoints/
+
+# Scala/SBT build files
+**/target/
+**/project/target/
+**/project/project/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp

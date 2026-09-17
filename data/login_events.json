@@ -1,0 +1,7 @@
+{"event_id":"hdfs001","user_id":"user101","location":"Hyderabad","event_type":"LOGIN_FAILED","timestamp":"2026-09-18T00:11:00"}
+{"event_id":"hdfs002","user_id":"user101","location":"Hyderabad","event_type":"LOGIN_FAILED","timestamp":"2026-09-18T00:11:10"}
+{"event_id":"hdfs003","user_id":"user101","location":"Hyderabad","event_type":"LOGIN_FAILED","timestamp":"2026-09-18T00:11:20"}
+{"event_id":"hdfs004","user_id":"user101","location":"USA","event_type":"LOGIN_SUCCESS","timestamp":"2026-09-18T00:11:30"}
+{"event_id":"hdfs005","user_id":"user102","location":"Bangalore","event_type":"LOGIN_SUCCESS","timestamp":"2026-09-18T00:12:00"}
+{"event_id":"hdfs006","user_id":"user104","location":"Hyderabad","event_type":"MFA_FAILED","timestamp":"2026-09-18T00:12:10"}
+{"event_id":"hdfs007","user_id":"user104","location":"Hyderabad","event_type":"MFA_FAILED","timestamp":"2026-09-18T00:12:20"}
