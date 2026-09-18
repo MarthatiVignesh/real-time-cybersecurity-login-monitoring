@@ -1,0 +1,11 @@
+Spark Structured Streaming - Brute Force Detection Test
+
+Batch: 15
+
+window_start       : 2026-09-18 02:50:00
+window_end         : 2026-09-18 02:51:00
+user_id            : final_user
+attempt_count      : 3
+alert_type         : BRUTE_FORCE_SUSPECTED
+severity            : HIGH
+reason              : 3 or more failed login attempts within 1 minute

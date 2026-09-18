@@ -1,0 +1,26 @@
+HBase Table Schema Evidence
+
+Table:
+security_alerts
+
+Status:
+ENABLED
+
+Column Family:
+details
+
+Versions:
+1
+
+TTL:
+FOREVER
+
+Bloom Filter:
+ROW
+
+Block Cache:
+true
+
+Result:
+The HBase security_alerts table is enabled and contains the
+details column family for storing security alert information.

@@ -1,0 +1,35 @@
+HBase Security Alerts Scan Evidence
+
+Table:
+security_alerts
+
+Column Family:
+details
+
+Rows Verified:
+3
+
+Alert 1:
+Row Key: user101_bruteforce_001
+Alert Type: BRUTE_FORCE_SUSPECTED
+Severity: HIGH
+Attempt Count: 3
+Reason: 3 or more failed login attempts within 1 minute
+
+Alert 2:
+Row Key: user101_location_001
+Alert Type: SUSPICIOUS_LOCATION_CHANGE
+Severity: MEDIUM
+Attempt Count: 1
+Reason: Failed login from Hyderabad followed by successful login from USA
+
+Alert 3:
+Row Key: user104_mfa_001
+Alert Type: MFA_ATTACK_SUSPECTED
+Severity: HIGH
+Attempt Count: 2
+Reason: 2 or more MFA failures within 1 minute
+
+Result:
+HBase successfully stored and retrieved the security alerts
+using the details column family.

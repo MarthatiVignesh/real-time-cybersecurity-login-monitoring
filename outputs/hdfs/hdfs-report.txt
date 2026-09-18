@@ -1,0 +1,42 @@
+Configured Capacity: 269427478528 (250.92 GB)
+Present Capacity: 242895040512 (226.21 GB)
+DFS Remaining: 242852159488 (226.17 GB)
+DFS Used: 42881024 (40.89 MB)
+DFS Used%: 0.02%
+Replicated Blocks:
+	Under replicated blocks: 2
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 2
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (localhost)
+Hostname: LAPTOP-C3GSM88O.localdomain
+Decommission Status : Normal
+Configured Capacity: 269427478528 (250.92 GB)
+DFS Used: 42881024 (40.89 MB)
+Non DFS Used: 12771766272 (11.89 GB)
+DFS Remaining: 242852159488 (226.17 GB)
+DFS Used%: 0.02%
+DFS Remaining%: 90.14%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Fri Sep 18 09:59:23 IST 2026
+Last Block Report: Fri Sep 18 00:13:08 IST 2026
+Num of Blocks: 19
+
+

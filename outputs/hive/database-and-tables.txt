@@ -1,0 +1,28 @@
+Hive Database and Processed Login Events
+
+Database:
+cybersecurity
+
+Table:
+login_events_fixed
+
+Type:
+EXTERNAL TABLE
+
+HDFS Location:
+/cybersecurity/processed/
+
+Verification:
+7 processed login events successfully read from HDFS.
+
+event_id  user_id   event_type       timestamp              status
+hdfs001   user101   LOGIN_FAILED     2026-09-18T00:11:00    SUSPICIOUS
+hdfs002   user101   LOGIN_FAILED     2026-09-18T00:11:10    SUSPICIOUS
+hdfs003   user101   LOGIN_FAILED     2026-09-18T00:11:20    SUSPICIOUS
+hdfs004   user101   LOGIN_SUCCESS    2026-09-18T00:11:30    SUSPICIOUS_LOCATION_CHANGE
+hdfs005   user102   LOGIN_SUCCESS    2026-09-18T00:12:00    NORMAL
+hdfs006   user104   MFA_FAILED        2026-09-18T00:12:10    SUSPICIOUS
+hdfs007   user104   MFA_FAILED        2026-09-18T00:12:20    SUSPICIOUS
+
+Result:
+Hive successfully queried the processed cybersecurity login data stored in HDFS.

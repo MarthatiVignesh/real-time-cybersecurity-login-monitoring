@@ -1,0 +1,25 @@
+Hive Partitioning Evidence
+
+Database:
+cybersecurity
+
+Partitioned Table:
+login_events_partitioned
+
+Partition Column:
+event_type
+
+Partitions Created:
+event_type=LOGIN_FAILED
+event_type=LOGIN_SUCCESS
+event_type=MFA_FAILED
+
+Partitioning Method:
+Dynamic partitioning
+
+Hive Settings:
+hive.exec.dynamic.partition=true
+hive.exec.dynamic.partition.mode=nonstrict
+
+Result:
+Dynamic partitions were successfully created based on event_type.

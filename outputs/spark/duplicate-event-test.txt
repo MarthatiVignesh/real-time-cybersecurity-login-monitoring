@@ -1,0 +1,11 @@
+Spark Structured Streaming - Duplicate Event Detection Test
+
+Test Objective:
+Verify that duplicate events with the same event_id are removed.
+
+Duplicate event_id : duplicate001
+Original event      : LOGIN_FAILED
+Duplicate received  : Yes
+Deduplication key   : event_id
+Result              : Duplicate event removed
+Final processing    : Only one unique event processed

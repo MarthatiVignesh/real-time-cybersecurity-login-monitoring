@@ -1,0 +1,8 @@
+Spark Structured Streaming - Suspicious Location Change Detection Test
+
+user_id            : user101
+failed_location    : Hyderabad
+success_location   : USA
+alert_type         : SUSPICIOUS_LOCATION_CHANGE
+severity            : MEDIUM
+reason             : Failed login from Hyderabad followed by successful login from USA

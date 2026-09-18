@@ -1,0 +1,3 @@
+579    579    /cybersecurity/alerts
+1.0 K  1.0 K  /cybersecurity/processed
+888    888    /cybersecurity/raw

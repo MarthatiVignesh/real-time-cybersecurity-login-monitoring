@@ -1,0 +1,21 @@
+Hive Partition Query Evidence
+
+Database:
+cybersecurity
+
+Table:
+login_events_partitioned
+
+Query:
+SELECT event_type, COUNT(*) AS event_count
+FROM login_events_partitioned
+GROUP BY event_type;
+
+Query Result:
+LOGIN_FAILED    3
+LOGIN_SUCCESS   2
+MFA_FAILED      2
+
+Result:
+Hive successfully queried the partitioned login events table and
+returned event counts for each event_type partition.

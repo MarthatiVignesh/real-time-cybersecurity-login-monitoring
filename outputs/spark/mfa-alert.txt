@@ -1,0 +1,7 @@
+Spark Structured Streaming - MFA Attack Detection Test
+
+user_id            : user104
+attempt_count      : 2
+alert_type         : MFA_ATTACK_SUSPECTED
+severity           : HIGH
+reason             : 2 or more MFA failures within 1 minute

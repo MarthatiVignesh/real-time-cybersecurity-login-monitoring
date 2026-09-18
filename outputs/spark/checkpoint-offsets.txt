@@ -1,0 +1,21 @@
+Spark Structured Streaming - Checkpoint Evidence
+
+Checkpoint Directory:
+checkpoints/spark-cybersecurity-security-rules-v4
+
+Checkpoint Status:
+Created and actively used by the Spark streaming query.
+
+Checkpoint Components:
+- offsets/  : Stores source offsets for streaming progress
+- commits/  : Stores completed micro-batch commit information
+- sources/  : Stores streaming source metadata
+- state/    : Stores state for stateful operations such as windowing and deduplication
+- metadata  : Stores streaming query metadata
+
+Verification:
+The checkpoint directory exists and contains offsets, commits, sources, state, and metadata directories.
+
+Purpose:
+Checkpointing enables Spark Structured Streaming to track processing progress
+and recover from failures without restarting processing from the beginning.

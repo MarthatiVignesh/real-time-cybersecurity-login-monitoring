@@ -1,0 +1,5 @@
+
+GROUP                       TOPIC                PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID     HOST            CLIENT-ID
+cybersecurity-monitor-group cybersecurity-logins 0          0               6               6               -               -               -
+cybersecurity-monitor-group cybersecurity-logins 1          8               10              2               -               -               -
+cybersecurity-monitor-group cybersecurity-logins 2          128             128             0               -               -               -
