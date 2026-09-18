@@ -12,3 +12,7 @@ checkpoints/
 # Temporary files
 *.tmp
 *.swp
+
+# Local Hive Derby metastore
+metastore_db/
+**/metastore_db/
