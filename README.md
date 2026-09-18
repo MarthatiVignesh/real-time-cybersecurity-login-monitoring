@@ -87,10 +87,13 @@ Modern applications continuously generate authentication events such as successf
 
 ## 📂 Repository Structure
 
+The repository is organized into source code, sample data, and verified execution evidence.
+
 ```text
 real-time-cybersecurity-login-monitoring/
 │
 ├── .gitignore
+├── README.md
 │
 ├── data/
 │   ├── login_events.json
@@ -115,10 +118,94 @@ real-time-cybersecurity-login-monitoring/
 │           └── scala/
 │               └── CybersecurityLoginStreaming.scala
 │
-└── README.md
+└── outputs/
+    ├── kafka/
+    │   ├── topic-description.txt
+    │   ├── consumer-group-offsets.txt
+    │   ├── replication-before-failure.txt
+    │   ├── replication-after-broker-failure.txt
+    │   └── replication-after-recovery.txt
+    │
+    ├── spark/
+    │   ├── brute-force-alert.txt
+    │   ├── mfa-alert.txt
+    │   ├── location-change-alert.txt
+    │   ├── duplicate-event-test.txt
+    │   └── checkpoint-offsets.txt
+    │
+    ├── hdfs/
+    │   ├── hdfs-report.txt
+    │   ├── hdfs-directories.txt
+    │   └── hdfs-data-listing.txt
+    │
+    ├── hive/
+    │   ├── database-and-tables.txt
+    │   ├── partitions.txt
+    │   └── partition-query-results.txt
+    │
+    └── hbase/
+        ├── table-schema.txt
+        └── security-alerts-scan.txt
 ```
 
-Runtime Spark checkpoints and generated SBT build directories are excluded from Git using `.gitignore`.
+### Directory purpose
+
+| Directory | Purpose |
+|---|---|
+| `data/` | Sample raw, processed, and security-alert JSON data |
+| `producer/` | Scala Kafka event generator |
+| `spark/` | Spark Structured Streaming application and security rules |
+| `outputs/kafka/` | Kafka topic, offset, replication, failure, and recovery evidence |
+| `outputs/spark/` | Spark detection, deduplication, and checkpoint evidence |
+| `outputs/hdfs/` | HDFS capacity, directory, and data-listing evidence |
+| `outputs/hive/` | Hive database, partition, and query evidence |
+| `outputs/hbase/` | HBase schema and security-alert scan evidence |
+
+Runtime Spark checkpoints, SBT build directories, logs, temporary files, and the local Hive Derby metastore are intentionally excluded from Git.
+
+---
+
+## 📋 Verified Execution Evidence
+
+The `outputs/` directory contains the execution evidence collected while testing the project.
+
+### Kafka
+- 3-partition `cybersecurity-logins` topic description
+- Consumer-group offsets and lag
+- 3-broker replication test with replication factor 3
+- ISR state before broker failure
+- ISR and leader state after broker failure
+- ISR state after broker recovery
+
+### Spark Structured Streaming
+- Brute-force detection: 3 failed logins within 1 minute
+- MFA attack detection: 2 MFA failures within 1 minute
+- Suspicious location-change detection
+- Duplicate-event removal using `event_id`
+- Streaming checkpoint evidence
+
+### HDFS
+- NameNode/DataNode capacity report
+- `/cybersecurity/raw`
+- `/cybersecurity/processed`
+- `/cybersecurity/alerts`
+- Stored raw, processed, and alert files
+
+### Hive
+- `cybersecurity` database
+- External processed-login-events table
+- Dynamic partitioning by `event_type`
+- Verified partitions: `LOGIN_FAILED`, `LOGIN_SUCCESS`, and `MFA_FAILED`
+- Aggregation results: 3 failed, 2 successful, and 2 MFA-failed events
+
+### HBase
+- Enabled `security_alerts` table
+- `details` column family
+- 3 verified security-alert rows
+- Brute-force, suspicious-location, and MFA alert records
+
+These files provide evidence for the major project demonstrations without committing runtime state such as Spark checkpoints or the local Hive metastore.
+
 
 ---
 
